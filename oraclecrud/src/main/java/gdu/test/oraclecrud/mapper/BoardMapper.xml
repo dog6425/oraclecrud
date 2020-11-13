@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gdu.test.oraclecrud.mapper.BoardMapper">
+	<select id="selectBoardListAll" resultType="gdu.test.oraclecrud.vo.BoardVo">
+		SELECT 
+	        board_id boardId, 
+	        board_title boardTitle, 
+	        board_writer boardWriter
+     	FROM board
+	</select>
+	
+	<select id="selectBoardListByPage" parameterType="int" resultType="gdu.test.oraclecrud.vo.BoardVo">
+	<!-- parameter타입은 값을 가져와서 DB에 사용할 때
+	result타입은db에서 찾은 값들을 보내줄 때 -->
+		SELECT
+			board_id boardId, 
+	        board_title boardTitle, 
+	        board_writer boardWriter
+	    FROM board
+	    WHERE board_id = #{boardId}
+	</select>
+</mapper>
