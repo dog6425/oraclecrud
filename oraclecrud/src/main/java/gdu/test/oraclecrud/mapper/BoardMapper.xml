@@ -19,4 +19,38 @@
 	    FROM board
 	    WHERE board_id = #{boardId}
 	</select>
+	
+	<insert id=insertBoardListAll resultType="gdu.test.oraclecrud.vo.BoardVo"> 
+		insert into
+		board(
+			,title
+			,content,
+			,writer)
+		values(
+			,#{title}
+			,#{content}
+			,#{writer}
+			,now())
+	</insert>
+	
+	<update id="updateBoard">
+        update board set
+            title = #{title}
+            , content = #{content}
+            , writer = #{writer}
+        where
+            code = #{code}
+    </update>
+    
+    <delete id="deleteBoard">
+        delete from board
+        where
+            code = #{code}
+    </delete>
+    
+    <select id="selectBoardByCode" parameterType="gdu.test.oraclecrud.vo.BoardVo" resultType="gdu.test.oraclecrud.vo.BoardVo">
+    	select * from board
+    	where
+    		code=${code}
+	</select>
 </mapper>

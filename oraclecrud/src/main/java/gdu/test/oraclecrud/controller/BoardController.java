@@ -6,9 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import gdu.test.oraclecrud.service.BoardAddService;
 import gdu.test.oraclecrud.service.BoardService;
+import gdu.test.oraclecrud.vo.BoardAdd;
 import gdu.test.oraclecrud.vo.BoardVo;
 
 @Controller
@@ -34,6 +37,16 @@ public class BoardController {
 		return "boardList";
 		
 	}
+	// 게시글 등록
+/*	@GetMapping("/addBoard")
+	public String write(@ModelAttribute("BoardVo")BoardVo boardVo, Model model) throws Exception{
+		BoardAddService.insertBoard(BoardVo);
+*/
+	@GetMapping("/addBoard")
+	public String addBoard(Model model) {
+		List<BoardVo> addBoard = BoardAddService.getaddBoard();
+	}
+	
 }
 	
 	
