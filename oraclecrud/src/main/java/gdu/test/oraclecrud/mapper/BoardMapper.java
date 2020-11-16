@@ -12,11 +12,11 @@ public interface BoardMapper {
 	
 	BoardVo selectBoardListByPage(int boardId);
 	
-	BoardVo insertBoard(int BoardId);
+	BoardVo insertBoard(String boardinsert);
 	
-	BoardVo updateBoard(int BoardId);
+	BoardVo updateBoard(String boarddelete);
 	
-	BoardVo deleteBoard(int BoardId);
+	BoardVo deleteBoard(String boardupdate);
 	
 	
 	

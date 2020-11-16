@@ -15,7 +15,7 @@ public class BoardService {
 	@Autowired private BoardMapper boardMapper;
 	
 	//
-	public List<BoardVo> getBoardList() {
+	public List<BoardVo> getboardList() {
 		return boardMapper.selectBoardListAll();
 		
 	}
@@ -25,19 +25,18 @@ public class BoardService {
 	}
 	
 	//게시글 작성
-	public BoardVo getinsertBoard(int boardId) {
-		return boardMapper.insertBoard(boardId);
+	public BoardVo getinsertBoard(String boardinsert) {
+		return boardMapper.insertBoard(boardinsert);
 	
 	//게시글 수정
 	}
-	public BoardVo getupdateBoard(int boardId) {
-		return boardMapper.updateBoard(boardId);
+	public BoardVo getupdateBoard(String boardupdate){
+		return boardMapper.updateBoard(boardupdate);
 	}
 	
 	//게시글 삭제
-	public BoardVo getdeleteBoard(int boardId) {
-		return boardMapper.deleteBoard(boardId);
+	public BoardVo getdeleteBoard(String boarddelete) {
+		return boardMapper.deleteBoard(boarddelete);
 	}
-		
 	
 }

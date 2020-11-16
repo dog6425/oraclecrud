@@ -19,7 +19,7 @@ public class BoardController {
 	// 게시글 목록
 	@GetMapping("/boardList")
 	public String boardList(Model model) {
-		List<BoardVo> boardList = boardService.getBoardList();
+		List<BoardVo> boardList = boardService.getboardList();
 		
 		model.addAttribute("boardList", boardList);
 		return "boardList";
@@ -36,29 +36,32 @@ public class BoardController {
 		
 	}
 	// 게시글 등록
-	@GetMapping("/addBoard")
-	public String addBoard(Model model,
-					@PathVariable(name="boardId", required=true) int boardId) {
-		BoardVo addBoard = boardService.getinsertBoard(boardId);
-		model.addAttribute("addBoard",addBoard);
+		@GetMapping("/addBoard/{boardinsert}")
+		public String insertBoard(Model model,
+					@PathVariable(name="boardinsert", required=true) String boardinsert) {
+		BoardVo addBoard = boardService.getinsertBoard(boardinsert);
+		model.addAttribute("addBoard", addBoard);
 		return "addBoard";
-	}
+			
+		}
+	
 	// 게시글 수정
-	@GetMapping("/updateBoard")
-	public String updateBoard(Model model,
-					@PathVariable(name="boardId", required=true) int boardId) {
-		BoardVo updateBoard = boardService.getupdateBoard(boardId);
-		model.addAttribute("updateBoard",updateBoard);
-		return "updateBoard";
-	}
+		@GetMapping("/modifyBoard/{boardupdate}")
+		public String modifyBoard(Model model,
+					@PathVariable(name="boardupdate", required=true) String boardupdate) {
+			BoardVo modifyBoard = boardService.getupdateBoard(boardupdate);
+			model.addAttribute("modifyBoard", modifyBoard);
+		return "modifyBoard";
+			
+		}
 	// 게시글 삭제
-	@GetMapping("/deleteBoard")
-	public String deleteBoard(Model model,
-					@PathVariable(name="boardId", required=true) int boardId) {
-		BoardVo getdeleteBoard = boardService.getdeleteBoard(boardId);
-		model.addAttribute("getdeleteBoard",getdeleteBoard);
-		return "getdeleteBoard";
-	}
+		@GetMapping("/eraseBoard/{boarddelete}")
+		public String eraseBoard(Model model,
+					@PathVariable(name="boarddelete", required=true) String boarddelete) {
+			BoardVo eraseBoard = boardService.getupdateBoard(boarddelete);
+			model.addAttribute("eraseBoard", eraseBoard);
+		return "eraseBoard";		
+		}
 }
 	
 	

@@ -33,7 +33,6 @@
 	
 	<body>
 		<h2>게시글 목록</h2>
-		
 		<table border="1">
 			<thead>
 				<tr>
@@ -48,6 +47,8 @@
 						<td><a href="/boardOne/${board.boardId}">${board.boardId}</a></td>
 						<td>${board.boardTitle}</td>
 						<td>${board.boardWriter}</td>
+						<td>${board.boardinsert}</td>
+						<td>${board.boarddelete}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

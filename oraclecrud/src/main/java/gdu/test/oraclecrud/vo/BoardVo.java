@@ -5,7 +5,9 @@ public class BoardVo {
 	private String boardTitle;
 	private String boardContent;
 	private String boardWriter;
-	
+	private String boardupdate;
+	private String boarddelete;
+	private String boardinsert;
 	public int getBoardId() {
 		return boardId;
 	}
@@ -30,10 +32,32 @@ public class BoardVo {
 	public void setBoardWriter(String boardWriter) {
 		this.boardWriter = boardWriter;
 	}
-	
+	public String getBoardupdate() {
+		return boardupdate;
+	}
+	public void setBoardupdate(String boardupdate) {
+		this.boardupdate = boardupdate;
+	}
+	public String getBoarddelete() {
+		return boarddelete;
+	}
+	public void setBoarddelete(String boarddelete) {
+		this.boarddelete = boarddelete;
+	}
+	public String getBoardinsert() {
+		return boardinsert;
+	}
+	public void setBoardinsert(String boardinsert) {
+		this.boardinsert = boardinsert;
+	}
 	@Override
 	public String toString() {
 		return "BoardVo [boardId=" + boardId + ", boardTitle=" + boardTitle + ", boardContent=" + boardContent
-				+ ", boardWriter=" + boardWriter + "]";
+				+ ", boardWriter=" + boardWriter + ", boardupdate=" + boardupdate + ", boarddelete=" + boarddelete
+				+ ", boardinsert=" + boardinsert + "]";
 	}
+
+	
+	
+	
 }
