@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import gdu.test.oraclecrud.mapper.BoardMapper;
-import gdu.test.oraclecrud.vo.BoardAdd;
 import gdu.test.oraclecrud.vo.BoardVo;
 
 @Service
@@ -15,31 +14,30 @@ import gdu.test.oraclecrud.vo.BoardVo;
 public class BoardService {
 	@Autowired private BoardMapper boardMapper;
 	
-	
+	//
 	public List<BoardVo> getBoardList() {
 		return boardMapper.selectBoardListAll();
 		
-	//게시글 작성
 	}
+	//
 	public BoardVo getBoardListByPage(int boardId){
 		return boardMapper.selectBoardListByPage(boardId);
 	}
 	
 	//게시글 작성
-	public int addBoard(BoardAdd boardAdd) {
-		return boardMapper.insertBoardAdd(boardAdd);
-	}
+	public BoardVo getinsertBoard(int boardId) {
+		return boardMapper.insertBoard(boardId);
 	
-	// 게시글 수정
-	public int updateBoard(BoardUpdate boardUpdate) {
-		return boardMapper.updateBoard(boardUpdate);
+	//게시글 수정
+	}
+	public BoardVo getupdateBoard(int boardId) {
+		return boardMapper.updateBoard(boardId);
 	}
 	
 	//게시글 삭제
-	public void deleteBoard(BoardDelete boardDelete) {
-		return boardMapper.deleteBoard(boardDelete);
+	public BoardVo getdeleteBoard(int boardId) {
+		return boardMapper.deleteBoard(boardId);
 	}
+		
 	
-	//게시글 조회
-	public BoardVo selectBoardByCode(BoardVo boardVo) throws Exception;
 }

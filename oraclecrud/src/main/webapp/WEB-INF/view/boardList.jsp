@@ -3,6 +3,29 @@
 
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="utf-8">
+<title>게시판</title>
+<link rel="stylesheet" type="text/css" href="/coco/resources/semantic.min.css">
+
+<style type="text/css">
+  body{
+    background-color: #dadada;
+  }
+  body>.grid{
+    height: 100%;
+  }
+  .image {
+            margin-top: -100px;
+        }
+        .column {
+            max-width: 1000px;
+        }
+        .view_btn {
+            cursor: pointer;
+        }
+</style>
+</head>
 	<head>
 		<meta charset="UTF-8">
 		<title>게시글 목록</title>

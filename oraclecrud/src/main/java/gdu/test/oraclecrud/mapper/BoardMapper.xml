@@ -20,7 +20,7 @@
 	    WHERE board_id = #{boardId}
 	</select>
 	
-	<insert id=insertBoardListAll resultType="gdu.test.oraclecrud.vo.BoardVo"> 
+	<insert id="insertBoard" parameterType="int"> 
 		insert into
 		board(
 			,title
@@ -33,7 +33,7 @@
 			,now())
 	</insert>
 	
-	<update id="updateBoard">
+	<update id="updateBoard" parameterType="int">
         update board set
             title = #{title}
             , content = #{content}
@@ -42,7 +42,7 @@
             code = #{code}
     </update>
     
-    <delete id="deleteBoard">
+    <delete id="deleteBoard" parameterType="int">
         delete from board
         where
             code = #{code}

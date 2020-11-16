@@ -12,12 +12,12 @@ public interface BoardMapper {
 	
 	BoardVo selectBoardListByPage(int boardId);
 	
-	public void insertBoard(BoardVo boardVo) throws Exception;
+	BoardVo insertBoard(int BoardId);
 	
-	public void updateBoard(BoardVo boardVo) throws Exception;
+	BoardVo updateBoard(int BoardId);
 	
-	public void deleteBoard(BoardVo boardVo) throws Exception;
+	BoardVo deleteBoard(int BoardId);
 	
-	public void BoardVo selectBoardByCode(BoardVo baordVo) throws Exception;
+	
 	
 }
