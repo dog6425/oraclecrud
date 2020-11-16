@@ -4,27 +4,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<meta charset="UTF-8">
-		<title>게시글 수정</title>
-	</head>
-	
-	<body>
-		<h2>게시글 수정</h2>
-		<table border="1">
-			<thead>
-				<tr>
-					<th>번호 수정</th>
-					<th>제목 수정</th>
-				</tr>
-			</thead>
-			<tbody>
-			
-					<tr>
-						<td>${modifyBoard.boardTitle}</td>
-						<td>${modifyBoard.boardWriter}</td>
-					</tr>
-		
-			</tbody>
-		</table>
-	</body>
+<meta charset="UTF-8">
+<title>게시글 수정</title>
+
+</head>
+<body>
+	<h2>게시글 수정</h2>
+	<table border="1">
+	<thead>
+		<tr>
+			<th>제목</th>
+			<th>이름</th>
+			<th>내용</th>
+		</tr>
+	</thead>
+	</table>
+</body>
 </html>

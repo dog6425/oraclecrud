@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>삭제</title>
+
+
 </head>
 <body>
 

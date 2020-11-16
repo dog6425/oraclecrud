@@ -34,9 +34,9 @@
 		<table border="1">
 			<thead>
 				<tr>
-					<th>번호</th>
-					<th>제목</th>
 					<th>이름</th>
+					<th>제목</th>
+					<th>내용</th>
 				</tr>
 			</thead>
 			<tbody>
