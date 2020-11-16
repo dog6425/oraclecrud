@@ -33,7 +33,7 @@
 			,now())
 	</insert>
 	
-	<update id="updateBoard" parameterType="int">
+	<update id="updateBoard" parameterType="gdu.test.oraclecrud.vo.BoardVo">
         update board set
             title = #{title}
             , content = #{content}

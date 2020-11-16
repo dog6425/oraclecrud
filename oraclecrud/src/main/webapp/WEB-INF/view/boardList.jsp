@@ -4,8 +4,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>게시판</title>
 <link rel="stylesheet" type="text/css" href="/coco/resources/semantic.min.css">
 
 <style type="text/css">
@@ -23,7 +21,7 @@
         }
         .view_btn {
             cursor: pointer;
-        }
+        } 
 </style>
 </head>
 	<head>
@@ -47,8 +45,6 @@
 						<td><a href="/boardOne/${board.boardId}">${board.boardId}</a></td>
 						<td>${board.boardTitle}</td>
 						<td>${board.boardWriter}</td>
-						<td>${board.boardinsert}</td>
-						<td>${board.boarddelete}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

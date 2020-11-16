@@ -3,37 +3,14 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>게시판</title>
-<link rel="stylesheet" type="text/css" href="/coco/resources/semantic.min.css">
-
-<style type="text/css">
-  body{
-    background-color: #dadada;
-  }
-  body>.grid{
-    height: 100%;
-  }
-  .image {
-            margin-top: -100px;
-        }
-        .column {
-            max-width: 1000px;
-        }
-        .view_btn {
-            cursor: pointer;
-        }
-</style>
-</head>
 	<head>
 		<meta charset="UTF-8">
 		<title>게시글 상세보기</title>
 	</head>
 	
 	<body>
-	<h2>게시글 상세보기</h2>
-	<table border="1">
+		<h2>게시글 상세보기</h2>
+		<table border="1">
 		<thead>
 			<tr>	
 				<th>제목</th>
@@ -43,14 +20,14 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="board" items="${boardOne}">
+			
 				<tr>
-					<td>${board.boardTitle}</td>
-					<td>${board.baordWriter}</td>
-					<td><a href="/modifyBoard/${board.boardupdate}">${board.boardupdate}</a></td>
-					<td><a href="/eraseBoard/${board.boarddelete}">${board.boarddelete}</a></td>
+					<td>${BoardOne.boardTitle}</td>
+					<td>${BoardOne.boardWriter}</td>
+					<td><a href="/modifyboard/">수정</a></td>
+					<td><a href="/eraseboard/">삭제</a></td>
 				</tr>
-			</c:forEach>
+		
 		</tbody>
 	</table>
 </body>

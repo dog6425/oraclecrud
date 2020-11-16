@@ -25,17 +25,17 @@ public class BoardService {
 	}
 	
 	//게시글 작성
-	public BoardVo getinsertBoard(String boardinsert) {
+	public BoardVo getinsertBoard(int boardinsert) {
 		return boardMapper.insertBoard(boardinsert);
 	
 	//게시글 수정
 	}
-	public BoardVo getupdateBoard(String boardupdate){
+	public BoardVo getupdateBoard(int boardupdate){
 		return boardMapper.updateBoard(boardupdate);
 	}
 	
 	//게시글 삭제
-	public BoardVo getdeleteBoard(String boarddelete) {
+	public BoardVo getdeleteBoard(int boarddelete) {
 		return boardMapper.deleteBoard(boarddelete);
 	}
 	
